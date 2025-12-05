@@ -1,26 +1,41 @@
 import java.util.*;
 import java.io.*;
 
-class prgm2 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+
+
+class Main{
+	public static void main(String args[]){
+		Scanner sc=new Scanner(System.in);
+		
+		int num1,num2,num3;
+		
+		num1=sc.nextInt();
+		num2=sc.nextInt();
+		num3=sc.nextInt();
+		
+		int ans=UserMainCode.calculateSum(num1,num2,num3);
+		System.out.println(ans);
+	}
+}
+class UserMainCode {
+    public static int calculateSum(int num1,int num2,int num3){
+
         
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-        int c = sc.nextInt();
 
-        int sum = 0;
-
-        if (a == 13) {
-            sum = 0;            
-        } else if (b == 13) {
-            sum = a;            
-        } else if (c == 13) {
-            sum = a + b;       
+        if (num1 == 13) {
+        	if(num3==13){
+        		return 0;
+        	}else{
+            return num3;   
+            }        
+        } else if (num2 == 13) {
+            return num1;            
+        } else if (num3 == 13) {
+            return num1 + num2;       
         } else {
-            sum = a + b + c;   
+            return num1 + num2 + num3;   
         }
 
-        System.out.println(sum);
+    
     }
 }
